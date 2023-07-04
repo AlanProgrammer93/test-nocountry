@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../config/connectDB";
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../config/connectDB');
 
-export const Task = sequelize.define(
+const Task = sequelize.define(
   "task",
   {
     id: {
@@ -21,3 +21,5 @@ export const Task = sequelize.define(
     timestamps: false,
   }
 );
+
+module.exports = Task;
