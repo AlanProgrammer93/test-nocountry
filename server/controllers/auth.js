@@ -21,7 +21,10 @@ exports.createTask = async (req, res) => {
         const newTask = await Task.create({
             name,
         });
-        res.json(newTask);
+        res.json({
+            newTask,
+            msj: "Cambios"
+        });
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
